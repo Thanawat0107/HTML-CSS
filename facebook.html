@@ -121,7 +121,7 @@
                     <div>
                         <img src="https://www.egames.news/__export/1680280191729/sites/debate/img/2023/03/31/cyberpunk-edgerunners-lucy.jpg_976912859.jpg"
                             alt="">
-                        <input type="text" placeholder="คุณกำลังคิดอะไรอยู่">
+                        <input type="text" placeholder="คุณกำลังคิดอะไรอยู่" id = "post-input">
                     </div>
 
                     <hr>
@@ -132,6 +132,8 @@
                         <button><i class="color-deeppink fa-solid fa-flag"></i> คลิป Reels</button>
                     </div>
                 </div>
+
+                <div id="post-body"></div>
 
                 <div class="post">
                     <div class="post-header">
@@ -144,7 +146,7 @@
                             </div>
                         </div>
                         <div class="header-right">
-                            <button>icon</button>
+                            <button><i class="fa-solid fa-ellipsis"></i></button>
                         </div>
                     </div>
 
@@ -161,9 +163,9 @@
                     </div>
 
                     <div class="post-input-comment">
-                        <img src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t39.30808-6/373652630_624060113160930_4741595607188945688_n.jpg?stp=dst-jpg_p526x296&_nc_cat=103&ccb=1-7&_nc_sid=5614bc&_nc_eui2=AeGu7ns8KrxR221Iv83iFSw5daFKrWBe-251oUqtYF77bhri7hKCTeKwvA08Cpp53fG7Ue5TxWiAsyOagYsGB6vw&_nc_ohc=9AXTg9ClVS8AX-F-dTQ&_nc_ht=scontent.fbkk10-1.fna&oh=00_AfCGp1zVPZSt_Qvg4WcLTAv6guUfUM7zaIFrNZK5Crougw&oe=6500395F" alt="">
-
+                        <img src="https://www.egames.news/__export/1680280191729/sites/debate/img/2023/03/31/cyberpunk-edgerunners-lucy.jpg_976912859.jpg" alt="">
                         <div class="input-container">
+                            <input type="text" name="" id="" placeholder="แสดงความคิดเห็น...">
                             <button><i class="fa-solid fa-magnifying-glass"></i></button>
                             <button><i class="fa-brands fa-twitter"></i></button>
                             <button><i class="fa-regular fa-star"></i></button>
@@ -197,61 +199,49 @@
           posts.forEach(function ({ message, date }) {
             str += ` 
             <div class="post">
-              <!-- post header -->
-              <div class="post-header">
-                <div class="header-left">
-                  <img
-                    src="https://scontent-lhr8-1.xx.fbcdn.net/v/t39.30808-6/341534883_740804337523133_4684572932628061992_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=jSEy81UzQ_UAX8udFwP&_nc_ht=scontent-lhr8-1.xx&oh=00_AfCHeLaqph_gzQpu5lrhS41a_fBwGnKwffGWy5Z0WeGSAw&oe=64FA4792"
-                    alt=""
-                  />
-                  <div class="part-name">
-                    <h4>KA RM</h4>
-                    <span>${date}</span>
-                  </div>
+                    <div class="post-header">
+                        <div class="header-left">
+                            <img src="https://www.egames.news/__export/1680280191729/sites/debate/img/2023/03/31/cyberpunk-edgerunners-lucy.jpg_976912859.jpg"
+                            alt="">
+                            <div class="part-name">
+                                <h4>Gakuto</h4>
+                                <span>${date}</span>
+                            </div>
+                        </div>
+                        <div class="header-right">
+                            <button>icon</button>
+                        </div>
+                    </div>
+
+                    <div class="post-caption">
+                        <p>${message}</p>
+                    </div>
+
+                    <div class="post-tab-menu">
+                        <button><i class="fa-regular fa-thumbs-up"></i> ถูกใจ</button>
+                        <button><i class="fa-regular fa-comment-dots"></i> แสดงความคิดเห็น</button>
+                        <button><i class="fa-solid fa-share"></i> แชร์</button>
+                    </div>
+
+                    <div class="post-input-comment">
+                        <img src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t39.30808-6/373652630_624060113160930_4741595607188945688_n.jpg?stp=dst-jpg_p526x296&_nc_cat=103&ccb=1-7&_nc_sid=5614bc&_nc_eui2=AeGu7ns8KrxR221Iv83iFSw5daFKrWBe-251oUqtYF77bhri7hKCTeKwvA08Cpp53fG7Ue5TxWiAsyOagYsGB6vw&_nc_ohc=9AXTg9ClVS8AX-F-dTQ&_nc_ht=scontent.fbkk10-1.fna&oh=00_AfCGp1zVPZSt_Qvg4WcLTAv6guUfUM7zaIFrNZK5Crougw&oe=6500395F" alt="">
+                        <div class="input-container">
+                            <input type="text" name="" id="" placeholder="แสดงความคิดเห็น...">
+                            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <button><i class="fa-brands fa-twitter"></i></button>
+                            <button><i class="fa-regular fa-star"></i></button>
+                            <button><i class="fa-solid fa-wand-magic-sparkles"></i></button>
+                            <button><i class="fa-regular fa-images"></i></button>
+                        </div>
+                    </div>
                 </div>
-                <div class="header-right">
-                  <button><i class="fa-solid fa-ellipsis"></i></button>
-                </div>
-              </div>
-  
-              <!-- post caption -->
-              <div class="post-caption">
-                <p>
-                  ${message}
-                </p>
-              </div>
-  
-              <!-- post tab menu -->
-              <div class="post-tab-menu">
-                <button><i class="fa-regular fa-thumbs-up"></i> ถูกใจ</button>
-                <button>
-                  <i class="fa-regular fa-message"></i> แสดงความคิดเห็น
-                </button>
-                <button><i class="fa-solid fa-share"></i> แชร์</button>
-              </div>
-  
-              <!-- post comment -->
-              <div class="post-input-comment">
-                <img
-                  src="https://scontent-lhr8-1.xx.fbcdn.net/v/t39.30808-6/341534883_740804337523133_4684572932628061992_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=jSEy81UzQ_UAX8udFwP&_nc_ht=scontent-lhr8-1.xx&oh=00_AfCHeLaqph_gzQpu5lrhS41a_fBwGnKwffGWy5Z0WeGSAw&oe=64FA4792"
-                  alt=""
-                />
-                <div class="input-container">
-                  <input type="text" placeholder="เขียนความคิดเห็น..." />
-                  <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                  <button><i class="fa-brands fa-twitter"></i></button>
-                  <button><i class="fa-solid fa-star"></i></button>
-                  <button><i class="fa-solid fa-wand-magic-sparkles"></i></button>
-                  <button><i class="fa-regular fa-image"></i></button>
-                </div>
-              </div>
-            </div>
             `;
           });
   
           postBody.innerHTML = str;
         }
       </script>
+      <script src="js/data.module.js"></script>
 </body>
 
 </html>

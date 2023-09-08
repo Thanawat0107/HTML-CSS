@@ -270,7 +270,7 @@ body {
     color: gray;
 }
 
-.post .post-header .menu-right button {
+.post .post-header .header-right button {
     background: none;
     border: none;
     color: white;
@@ -299,12 +299,12 @@ body {
     flex-direction: row;
     justify-content: space-between;
     border-top: 1px solid #444545;
-    border-bottom: #444545;
-    margin: 4px 0px;
+    border-bottom: 1px solid #444545;
+    margin: 8px 0px;
     padding: 4px 0px;
 }
 
-.post .post-tab-manu button {
+.post .post-tab-menu button {
     flex: content;
     padding: 6px;
     color: gray;
@@ -318,9 +318,10 @@ body {
     }
 }
 
-.post .post-intput-comment {
+.post .post-input-comment {
     display: flex;
     justify-content: space-between;
+    gap: 8px;
 }
 
 .post .post-input-comment img{
@@ -332,12 +333,13 @@ body {
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 80px 12px;
     border-radius: 30px;
     background-color: #555567;
 }
 
 .post .post-input-comment .input-container input {
+    padding: 8px;
+    font-size: 14px;
     width: 100%;
     background: none;
     border: none;
@@ -345,7 +347,7 @@ body {
     color: white;
 }
 
-.post .post-input-comment .input-container bottpn {
+.post .post-input-comment .input-container button {
     background: none;
     border: none;
     color: white;
